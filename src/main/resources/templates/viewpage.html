@@ -29,30 +29,34 @@ and open the template in the editor.
                 padding: 3px 10px;
                 cursor: pointer;
                 display: inline-block;
+                float: left;
 }
         </style>
     </head>
     <body>
     <center>
-        <h1 th:text="${paketnama}"></h1>
+        <h1>KTM</h1>
     </center>
     <hr/>
     <center>
-        <fieldset>
+        <fieldset style="display: inline-block">
+            <center>
+                <img th:src="${paketgbr}"/>
+            </center>
             <p>
                 Nama : <l th:text="${paketnama}"></l>
             </p>
             <br/><!-- comment -->
             <p>
-                NIM : <l th:text="${paketnim"></l>
+                NIM : <l th:text="${paketnim}"></l>
             </p>
             <br/><!-- comment -->
             <p>
-                TTL : <l th:text="${paketttl"></l>
+                TTL : <l th:text="${paketttl}"></l>
             </p>
             <br/><!-- comment -->
             <p>
-                Email : <l th:text="${paketemail"></l>
+                Email : <l th:text="${paketemail}"></l>
             </p>
             <br/><!-- comment -->
             
@@ -60,9 +64,7 @@ and open the template in the editor.
                 Gambar :
                 <br/><!-- comment -->
             </p>
-            <center>
-                <img th:src="${paketgbr}"/>
-            </center>
+            
         </fieldset>
     </center>
     </body>
