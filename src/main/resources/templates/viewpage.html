@@ -6,15 +6,15 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>you healing</title>
+        <title>form ktm</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body{
-                background-image: url(ace.jpg);
+                background-image: url(umy3.png);
                 background-repeat: no-repeat;
                 background-attachment: fixed;
-                background-size: cover;
+                background-size: 450px;
             }
             p{
                 font-family: 'helvetica neue', helvetica, sans-serif;
@@ -28,8 +28,8 @@ and open the template in the editor.
                 border-radius: 10px;
                 padding: 3px 10px;
                 cursor: pointer;
-                display: inline-block;
-                float: left;
+            }
+                
 }
         </style>
     </head>
@@ -39,30 +39,22 @@ and open the template in the editor.
     </center>
     <hr/>
     <center>
-        <fieldset style="display: inline-block">
+        <fieldset style="display: inline-block; background-color: #EFF5F5;width: 350px">
             <center>
                 <img th:src="${paketgbr}"/>
             </center>
-            <p>
-                Nama : <l th:text="${paketnama}"></l>
+            <p style="float: left;">
+                Nama : <l th:text="${paketnama}"></l><br>
             </p>
-            <br/><!-- comment -->
-            <p>
-                NIM : <l th:text="${paketnim}"></l>
+            <p style="float: left;">
+                NIM : <l th:text="${paketnim}"></l><br>
             </p>
-            <br/><!-- comment -->
-            <p>
-                TTL : <l th:text="${paketttl}"></l>
+            <br>
+            <p style="float: left;">
+                TTL : <l th:text="${paketttl}"></l><br>
             </p>
-            <br/><!-- comment -->
-            <p>
-                Email : <l th:text="${paketemail}"></l>
-            </p>
-            <br/><!-- comment -->
-            
-            <p>
-                Gambar :
-                <br/><!-- comment -->
+            <p style="float: left;">
+                Email : <l th:text="${paketemail}"></l><br>
             </p>
             
         </fieldset>
