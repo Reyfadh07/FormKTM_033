@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>KTP </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background-image: url(ace.jpg);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            p{
+                font-family: 'helvetica neue', helvetica, sans-serif;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                text-align: left;
+                border: 2px solid rgba(0,0,200,0.6);
+                background: #C69B7B;
+                color: black;
+                box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+                border-radius: 10px;
+                padding: 3px 10px;
+                cursor: pointer;
+                display: inline-block;
+}
+        </style>
+    </head>
+    <body>
+        <form action="/tampilan" method="POST" enctype="multipart/form-data">
+            <center>
+                <h1 align="center">KTP KONOHA</h1>
+            </center>
+            <hr/>
+            <fieldset>
+                <p>
+                    <label> Nama : </label>
+                    <input type="text"  name="nama"/>
+                </p>
+                <br/><!-- comment -->
+                <p>
+                    <label>Tgl lahir : </label>
+                    <input type="date" name="ttl"/>
+                </p>
+                <br/>
+                <p>
+                    <label>Foto : </label>
+                    <input type="file" name="gbr" accept="image/jpeg" class="form-control-file"/>
+                </p>
+                <br/>
+                <p>
+                    <input type="submit" value="Kirim" />
+                </p>
+            </fieldset>
+                
+                
+        </form>
+    </body>
+</html>
