@@ -6,11 +6,64 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>you healing</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background-image: url(ace.jpg);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            p{
+                font-family: 'helvetica neue', helvetica, sans-serif;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                text-align: left;
+                border: 2px solid rgba(0,0,200,0.6);
+                background: #C69B7B;
+                color: black;
+                box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+                border-radius: 10px;
+                padding: 3px 10px;
+                cursor: pointer;
+                display: inline-block;
+}
+        </style>
     </head>
     <body>
-        <div>TODO write content</div>
+    <center>
+        <h1 th:text="${paketnama}"></h1>
+    </center>
+    <hr/>
+    <center>
+        <fieldset>
+            <p>
+                Nama : <l th:text="${paketnama}"></l>
+            </p>
+            <br/><!-- comment -->
+            <p>
+                NIM : <l th:text="${paketnim"></l>
+            </p>
+            <br/><!-- comment -->
+            <p>
+                TTL : <l th:text="${paketttl"></l>
+            </p>
+            <br/><!-- comment -->
+            <p>
+                Email : <l th:text="${paketemail"></l>
+            </p>
+            <br/><!-- comment -->
+            
+            <p>
+                Gambar :
+                <br/><!-- comment -->
+            </p>
+            <center>
+                <img th:src="${paketgbr}"/>
+            </center>
+        </fieldset>
+    </center>
     </body>
 </html>

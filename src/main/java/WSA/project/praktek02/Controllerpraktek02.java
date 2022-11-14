@@ -12,6 +12,7 @@ import java.util.Date;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -25,7 +26,30 @@ import org.springframework.web.multipart.MultipartFile;
 public class Controllerpraktek02 {
     
     @RequestMapping("/tampilan")
-    @ResponseBody
+    public String tampil(
+            @RequestParam(value = "nama") String isinama,
+            @RequestParam(value = "nim") String isinim,
+            @RequestParam(value = "ttl") String isittl,
+            @RequestParam(value = "email") String isiemail,
+            @RequestParam(value = "gbr") MultipartFile isigbr,
+            Model bawa
+            
+    ) throws IOException{
+        byte[] img = isigbr.getBytes();
+        String base64gbr = Base64.encodeBase64String(img);
+        String gbrlink = "data:image/*;base64,".concat(base64gbr);
+        
+        bawa.addAttribute("paketnama", isinama);
+        bawa.addAttribute("paketnim", isinim);
+        bawa.addAttribute("paketttl", isittl);
+        bawa.addAttribute("pakeemail", isiemail);
+        bawa.addAttribute("paketgbr", isigbr);
+        
+    
+        return "viewpage";
+    }
+    
+  /*  @ResponseBody
     public String getData(@RequestParam("nama") String nama,
                           @RequestParam("ttl")  @DateTimeFormat(pattern="yyyy-mm-dd") Date tanggal,
                           @RequestParam("gbr") MultipartFile  gambar) throws IOException{
@@ -48,7 +72,7 @@ public class Controllerpraktek02 {
         else {result = nama + "cakep";}
         return result;
         
-    }
+    }*/
         
 }
 
